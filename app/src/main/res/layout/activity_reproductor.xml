@@ -134,7 +134,7 @@
                         android:autoSizeMinTextSize="15dp"
                         android:autoSizeTextType="uniform"
                         android:gravity="bottom"
-                        android:text="Nombre Canciónes"
+                        android:text="Nombre Canción"
                         android:textAlignment="center"
                         android:textColor="@color/colorTextUp"
                         android:textStyle="bold" />
