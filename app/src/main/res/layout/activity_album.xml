@@ -10,17 +10,18 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What's hot"
+        android:layout_marginTop="52dp"
+        android:text="What's hot this weekend?"
         android:textSize="60dp"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="38dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
-        android:layout_marginEnd="272dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="292dp"
         android:text="Albums"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/background_light"
@@ -29,8 +30,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="426dp"
+        android:layout_height="129dp"
         android:layout_marginTop="288dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -41,7 +42,41 @@
             android:id="@+id/layout"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/blanco" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@color/blanco" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/blanco"
+                />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@color/blanco" />
+        </LinearLayout>
     </HorizontalScrollView>
 
     <HorizontalScrollView
