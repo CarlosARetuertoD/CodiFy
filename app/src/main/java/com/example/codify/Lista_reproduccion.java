@@ -35,6 +35,8 @@ public class Lista_reproduccion extends AppCompatActivity {
                 "\"Abre Tus Ojos\" \n(Mejia, Osorio ) - 3:47",
                 "\"Yo No Sé Mañana\" \n(Piloto, Villamizar) (Pop Version) - 3:51",
         };
+
+        //SIIII
         ArrayAdapter<String> Adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_list_item_1,album_luis_fonsi){
             @NonNull
