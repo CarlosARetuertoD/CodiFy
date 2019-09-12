@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondocuatro"
+    android:background="@drawable/fondocinco"
     tools:context=".Perfil">
+
+    //tienen fondos.:
+    //fondouno , fonfodos , fondotres , fondocuatro , fondocinco
 
     <ImageView
         android:id="@+id/imageView6"
@@ -27,8 +30,8 @@
         android:layout_marginTop="9dp"
         android:layout_marginBottom="55dp"
         android:ems="10"
+        android:hint="Nickname"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +101,7 @@
                 app:srcCompat="@drawable/sobre" />
 
             <EditText
-                android:id="@+id/corre_user"
+                android:id="@+id/correo_user"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -132,8 +135,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:hint="|Cell phone number "
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <TextView
@@ -160,23 +163,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="Birthdate"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
         <Switch
-                android:id="@+id/switch1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:text="Male" />
+            android:id="@+id/switch2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Female" />
 
         <Switch
-                android:id="@+id/switch2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Female" />
-        </LinearLayout>
+            android:id="@+id/switch1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+    </LinearLayout>
 
 
 
