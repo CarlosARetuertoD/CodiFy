@@ -94,7 +94,10 @@
                   <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
                 </AND>
               </match>
+<<<<<<< HEAD
               <order>ANDROID_ATTRIBUTE_ORDER</order>
+=======
+>>>>>>> 2da175d520399592fa1b9b2609805b8e70e7d7c7
             </rule>
           </section>
           <section>
