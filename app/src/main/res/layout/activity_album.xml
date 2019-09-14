@@ -82,7 +82,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView18"
+                android:id="@+id/imag_album"
                 android:layout_width="242dp"
                 android:layout_height="186dp"
                 android:layout_marginTop="90dp"
@@ -144,12 +144,12 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/fecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
-                android:text="3 de marzo de 20117"
+                android:text="AQUI LA FECHA"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <LinearLayout

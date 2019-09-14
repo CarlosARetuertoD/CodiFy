@@ -32,12 +32,17 @@ import java.util.Map;
 public class Album extends AppCompatActivity {
 
     TextView txalbum;
+    ImageView imag_album;
+    TextView fecha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
         ExtraerJSON("https://api.spotify.com/v1/me/albums");
         txalbum = findViewById(R.id.txAlbum);
+        imag_album = findViewById(R.id.imag_album);
+        fecha = findViewById(R.id.fecha);
+
     }
 
     RequestQueue mRequestQueue;
@@ -60,6 +65,18 @@ public class Album extends AppCompatActivity {
 
                         String nombrealbum = jalbum.getString("name");
                         txalbum.setText(nombrealbum);
+
+                       String release_date = jalbum.getString("release_date");
+                        fecha.setText(release_date);
+
+
+                        JSONArray images = jalbum.getJSONArray("images");
+                        //for (int i=0;i<images.length();i++){
+                        JSONObject imagenmediana = images.getJSONObject(1);
+                        String urlimagen = imagenmediana.getString("url");
+                        Picasso.with(getBaseContext()).load(urlimagen).into(imag_album);
+
+
 
                        /* //Extraer Imagenes
                         JSONArray imageslist = json_data.getJSONArray("images");
@@ -107,7 +124,7 @@ public class Album extends AppCompatActivity {
                 Map<String, String>  params = new HashMap<String, String>();
                 params.put("Accept", "application/json");
                 params.put("Content-Type", "application/json");
-                params.put("Authorization", "Bearer BQC7U9QjCY8TtVBhNexOqLlW3CIoAPcH2ZoZtj-udCPm5eBUvAgh0BRkf7YM2clm4lcSkfbrPj-JbLusQZGQuyPL7pnnO38qPfpKBAW_nwSN9Wq9bjvjViTZxPfW72uhq2MtuBbeXFCczQPW-B7B1gCNKNi_kU0VWtnu2A-zXPCO");
+                params.put("Authorization", "Bearer BQBTAVzfL3MXAGyfLhV_dPSoqCgwE7m9qUXy_Zwa4QYbRw002RvncvuA4E3KneAsIQesdcSiTCNN22pT5nKDk9c0Mfiy-fRd1OqyxJ9fFsxmRLIcZLDi10hVIhTA1TCQnPQxjrea8ycO6jTUXjsItWIY8NV4lo9vCGXIhJUwan3L");
 
                 return params;
             }
