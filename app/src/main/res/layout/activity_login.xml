@@ -7,16 +7,6 @@
     tools:context=".Login">
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="634dp"
-        android:layout_height="810dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/marmol" />
-
-    <ImageView
         android:id="@+id/imageView11"
         android:layout_width="489dp"
         android:layout_height="890dp"
@@ -35,20 +25,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fondo_brillante" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="440dp"
-        android:layout_height="769dp"
-        app:srcCompat="@drawable/fondo_brillante1"
-        tools:layout_editor_absoluteX="-18dp"
-        tools:layout_editor_absoluteY="-10dp" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="411dp"
         android:layout_height="652dp"
-        android:background="#7EC7B2B2"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="7dp">
+        android:background="#0CC7B2B2"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="3dp">
 
         <TextView
             android:id="@+id/Welcome"
