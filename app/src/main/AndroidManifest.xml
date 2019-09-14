@@ -1,38 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.codify">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-<<<<<<< HEAD
-        <activity android:name=".Perfil">
-=======
         <activity android:name=".Lista_reproduccion"/>
         <activity android:name=".Login" />
         <activity android:name=".Reproductor"/>
         <activity android:name=".Intro" />
         <activity android:name=".Album">
->>>>>>> 2da175d520399592fa1b9b2609805b8e70e7d7c7
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        <activity android:name=".Login" />
-        <activity android:name=".Reproductor">
-
-        </activity>
-        <activity android:name=".Intro" />
-=======
->>>>>>> 2da175d520399592fa1b9b2609805b8e70e7d7c7
     </application>
 
 </manifest>
