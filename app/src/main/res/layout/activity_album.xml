@@ -24,12 +24,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.3" />
 
-        <ImageView
-            android:id="@+id/btn_return"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/img_flecha_back" />
+
 
         <Space
             android:layout_width="0dp"
@@ -94,11 +89,11 @@
                 app:srcCompat="@drawable/album_ed_sheeran" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/txAlbum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15sp"
-                android:text="÷(Deluxe)"
+                android:text="AQUI TEXTOO VEN VEN"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/blanco"
                 android:textSize="28sp" />
