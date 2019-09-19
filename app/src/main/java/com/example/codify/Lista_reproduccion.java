@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -19,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkError;
@@ -44,21 +48,24 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Lista_reproduccion extends AppCompatActivity {
 
-    ListView list_musica;
-
-
+    RecyclerView rv_playlist;
+    List<ItemPlaylist> list_playlists;
+    //HOLI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_reproduccion);
 
-        list_musica = findViewById(R.id.list_musica);
         ExtraerJSON("a");
+        rv_playlist = findViewById(R.id.rv_musica);
+        list_playlists = new ArrayList<>();
 
     }
 
@@ -68,15 +75,19 @@ public class Lista_reproduccion extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Log.e("Responsess",response);
-
                 try{
                     JSONArray items = new JSONObject(response).getJSONArray("items");
                     System.out.println("*****Diego estuvo aqui*****"+items.length());
-                    for(int i=0;i<items.length();i++){
-                        JSONObject json_data = items.getJSONObject(i);
-
-
+                   for(int i=0;i<items.length();i++){
+                       JSONObject json_data = items.getJSONObject(i);
+                       JSONArray artista = json_data.getJSONArray("artists");
+                       JSONObject nombreartista = artista.getJSONObject(0);
+                        list_playlists.add(new ItemPlaylist(json_data.getString("name"),nombreartista.getString("name"),"2"));
                     }
+                    PlaylistAdapter adapterRecyclerView = new PlaylistAdapter(getApplicationContext(), list_playlists);
+                    rv_playlist.setAdapter(adapterRecyclerView);
+                    rv_playlist.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -101,7 +112,7 @@ public class Lista_reproduccion extends AppCompatActivity {
         };
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
-                "https://api.spotify.com/v1/albums/0UhRsOyE3SzdM51cjS3LVm/tracks",
+                "https://api.spotify.com/v1/albums/63irJwZoWLRUc1lBKtuxmQ/tracks",
                 response_listener,response_error_listener)
         {
 
@@ -109,7 +120,7 @@ public class Lista_reproduccion extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("Accept", "application/json");
                 params.put("Content-Type", "application/json");
-                params.put("Authorization", "Bearer BQAy0NO45nHvYKpd4MggjeGinUrbVEZts9fo75qyPej6YqKDo55ZS-hDuaS3DAU4FbSjsBMZBUE9SdGcCBC6JS-imq21t5IUaZyamFNJ5UBSP95KrCbraAns7H77TwQq54Y0QNp-HTpPSjpHjYvCozS-GLVF2KTIl8CXjGRKFj2lXK1qFvlS5HpxcsunJZXkEY6QksYpvdQ5zXK5oIwtg61HRNSiwa6Acn4rPzS7omd37W4kA6x53yWhwmRLI-VEYvr1h4Pdf1LFmHYxFxjcfeTI8f070BCa");
+                params.put("Authorization", "Bearer BQD6NcZ66USYw1QvyDR5OcK7PQPhrti-4zv5XCua0vQWSjToCvA2Wt9PCh57COAkXGKaiatOGlVd-Sw9MgBJfG12U1U26GiRz7NbMEf6ktmuq2CJXS871BC9avMCUFgWQ5195Bkfc0QpdOHCMcoS2qvJkDJiL82TYBtH_oZgenjapLTl9H43bDUKCYXGGuaYon8PlfYbZiLkIRas30SXt17yZLcYgJrkdbNn3xQMm2LnF20JeFO6M_lgjXL5t_TcVfmD8DlSBtOzcTjel1BWxiARQ91dipxx");
 
                 return params;
             }

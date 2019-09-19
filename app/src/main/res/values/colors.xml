@@ -10,4 +10,5 @@
     <color name="rojo">#FF0000</color>
     <color name="backgroundcolor">#D8000000</color>
     <color name="verde_claro">#12BD4B</color>
+    <color name="transparente">#00FFFFFF</color>
 </resources>

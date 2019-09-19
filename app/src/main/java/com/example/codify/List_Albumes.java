@@ -9,6 +9,6 @@ public class List_Albumes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list__albumes);
+     //   setContentView(R.layout.activity_list__albumes);
     }
 }
