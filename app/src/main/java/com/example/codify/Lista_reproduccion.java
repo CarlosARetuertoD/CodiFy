@@ -120,7 +120,7 @@ public class Lista_reproduccion extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("Accept", "application/json");
                 params.put("Content-Type", "application/json");
-                params.put("Authorization", "Bearer BQD6NcZ66USYw1QvyDR5OcK7PQPhrti-4zv5XCua0vQWSjToCvA2Wt9PCh57COAkXGKaiatOGlVd-Sw9MgBJfG12U1U26GiRz7NbMEf6ktmuq2CJXS871BC9avMCUFgWQ5195Bkfc0QpdOHCMcoS2qvJkDJiL82TYBtH_oZgenjapLTl9H43bDUKCYXGGuaYon8PlfYbZiLkIRas30SXt17yZLcYgJrkdbNn3xQMm2LnF20JeFO6M_lgjXL5t_TcVfmD8DlSBtOzcTjel1BWxiARQ91dipxx");
+                params.put("Authorization", "Bearer BQAFKj8sGla8Y28FgoDOxSP0WKVHUKNjBYz1GoQ-zGOmDLk3kp3Pvuz6Tv-8IT3Dzi8t4wB9NHZuFiwyiqQ1YB968i9vDZoJbvuJe5E1d5hR1vfr6E1giTmd6TZz70BDvoBGxvlmZXagQ---hWmFXld9ZJ0H1Mvbu5O351QsRRoIbtLoC_PIUl4ssxNbMs0OZp_PNbgYYYu9BTurKHxO7-XByrUkBUPG4gF4lKm84qiEpBLp8Zu_MAfBowlZyc9eUF-Wwb5OrlHOI7nnV2fus1NzAwP8mmNY");
 
                 return params;
             }
